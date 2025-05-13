@@ -23,10 +23,41 @@ app.engine('liquid', engine.express())
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
-
+// Home
 app.get('/', async function (request, response) {
   response.render('index.liquid')
 })
+
+// Stekjes
+app.get('/stekjes', async function (request, response) {
+  response.render('stekjes.liquid')
+})
+
+// Zaden
+app.get('/zaden', async function (request, response) {
+  response.render('zaden.liquid')
+})
+
+// Geveltuin
+app.get('/geveltuin', async function (request, response) {
+  response.render('geveltuin.liquid')
+})
+
+// Agenda
+app.get('/agenda', async function (request, response) {
+  response.render('agenda.liquid')
+})
+
+// Partners
+app.get('/partners', async function (request, response) {
+  response.render('partners.liquid')
+})
+
+// Contact
+app.get('/contact', async function (request, response) {
+  response.render('contact.liquid')
+})
+
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
