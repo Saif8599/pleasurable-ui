@@ -80,6 +80,17 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-family: var(--poppins);
+  color: #3C593E;
+}
+
+/* Links */
+a {
+  font-family: var(--poppins);
+  color: #FF8D06;
+}
+
 @view-transition {
   navigation: auto;
 }
