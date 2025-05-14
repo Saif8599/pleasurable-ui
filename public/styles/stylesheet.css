@@ -8,25 +8,76 @@
 @font-face {
   font-family: "Poppins-Regular";
   src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../fonts/Poppins-Black.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../fonts/Poppins-Bold.ttf) format("truetype"),
+    url(../fonts/Poppins-Bold.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+  font-display: swap;
 }
 
 body {
   /* Colors */
 
+  --color-primary: #4e7141;
+  --color-primary-dark:  #3C593E;
+  --color-secondary: #f9e9c2;
+  --color-accent: #ff8d06;
+  --color-accent-dark: #491b02;
+
+  --color-bg-main: #fff;
+  --color-bg-secondary: #f9e9c2;
+
+  --text-light: #fff;
+  --text-dark: #000;
+  --text-body: #4e7141;
+  --text-accent: #ff8d06;
 
   /* Fonts */
-  --poppins: "Poppins-regular", sans-serif;
+
+  --font-header: 'Poppins-Black', sans-serif;
+  --font-subheader: 'Poppins-Bold', sans-serif;
+  --font-paragraph: "Poppins-Regular", sans-serif;
+  --font-link: 'Poppins-Regular', sans-serif;
 
 }
 
 /* Headings */
-h1,
+h1 {
+  font-family: var(--font-header);
+  color: var(--text-light);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--poppins);
+  font-family: var(--font-subheader);
+}
+
+p {
+  font-family: var(--font-paragraph);
+  color: var(--text-body), var(--text-dark);
+}
+
+a {
+  font-family: var(--font-link);
+  text-decoration: none;
 }
 
 p {
