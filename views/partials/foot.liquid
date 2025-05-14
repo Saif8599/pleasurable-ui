@@ -49,7 +49,7 @@
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #F9E9C2;
+  background-color: var(--color-secondary);
   padding: 3em 2em;
   gap: 30px;
   z-index: 30;
@@ -60,9 +60,9 @@ footer {
   }
 
   h3 {
+    font-family: var(--font-header);
     font-size: 2em;
-    color: #4E7141;
-    font-weight: 800;
+    color: var(--text-body);
   }
 
   .adres {
@@ -82,7 +82,7 @@ footer {
       text-decoration: none;
 
        &:hover {
-        color: black;
+        color: var(--text-black);
       }
     }
   }
