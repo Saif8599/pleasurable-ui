@@ -75,19 +75,10 @@ p {
   color: var(--text-body), var(--text-dark);
 }
 
-a {
-  font-family: var(--font-link);
-  text-decoration: none;
-}
-
-p {
-  font-family: var(--poppins);
-  color: #3C593E;
-}
-
 /* Links */
 a {
-  font-family: var(--poppins);
+  font-family: var(--font-paragraph);
+  text-decoration: none;
   color: #FF8D06;
 }
 
