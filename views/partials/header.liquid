@@ -9,3 +9,36 @@
   <h1>stekjes</h1>
 </header>
 
+<style>
+.hero {
+  height: 85vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero picture,
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: var(--font-size-mobile-xl);
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-desktop-xl);
+  }
+}
+</style> 
