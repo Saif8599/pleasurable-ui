@@ -63,4 +63,18 @@ summary {
 #hamburger-menu[open] + .nav-menu {
   transform: translateY(0);
 }
+
+@media (min-width: 768px) {
+  .nav-dropdown {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
 </style>
