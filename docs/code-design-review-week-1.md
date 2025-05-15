@@ -23,10 +23,10 @@ Review de website vervolgens op basis van de onderstaande criteria voor **RAPPE*
 - **P**rogressive **E**nhanced: zijn de verschillende features op de pagina Progressive Enhanced opgebouwd? Pak eventueel de deeltaak _Progressive Enhancement_ er eens bij om te bepalen hoe bepaalde componenten zo gebouwd kunnen worden dat ze het altijd blijven doen. 
 
 **Stap 3: integeren van geleeerde lessen** 
-Wat hebben jullie geleerd van deze code/design review? Zijn er zaken in jullie eigen werkwijze die jullie kunnen verbeteren? Hebben jullie een goed voorbeeld gezien voor een design oplossing. Maak waar nodig nieuwe taken (issues) aan en assign deze binnen jullie team. 
+Wat hebben jullie geleerd van deze code/design review? Zijn er zaken in jullie eigen werkwijze die jullie kunnen verbeteren? Of hebben jullie een mooie ontwerpoplossing gezien? Maak waar nodig nieuwe taken (issues) aan en assign deze binnen jullie team. 
 
 ## 2. Voortgangsgesprek 
-In je team heb je duidelijke afspraken gemaakt over jullie werkwijze en hoe jullie elkaar op de hoogte houde van vorderingen. Elk team komt langs bij een tweetal docenten om te vertellen hoe de samenwerking tot zover is gegaan. Zorg dat je het Project Board, de verschillende branches en eventueel PR bij de hand hebt. 
+In je team heb je duidelijke afspraken gemaakt over jullie werkwijze en hoe jullie elkaar op de hoogte houden van vorderingen. Elk team komt langs bij een tweetal docenten om te vertellen hoe de samenwerking tot zover is gegaan. Zorg dat je het Project Board, de verschillende branches en de PR's bij de hand hebt. 
 
 <!-- 
 
