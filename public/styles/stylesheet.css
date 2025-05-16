@@ -117,8 +117,12 @@ a {
 }
 
 /* List */
-li {
+li, summary {
   list-style-type: none;
+}
+
+a, button, summary {
+  cursor: pointer;
 }
 
 /* Buttons */
