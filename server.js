@@ -32,9 +32,21 @@ app.get('/', async function (request, response) {
 })
 
 // Stekjes
-app.get('/stekjes', async function (request, response) {
-  response.render('stekjes.liquid')
-})
+app.get("/stekjes", async function (request, response) {
+  // Haal alle stekjes op vanuit de WHOIS API door een fetch-verzoek te sturen naar de eindpoint `/bib_stekjes`
+  const stekjesResponse = await fetch(
+    `${API_BASE_URL}/bib_stekjes?fields=*,foto.id,foto.width,foto.height`
+  );
+
+  // Zet het response-object om naar JSON-formaat, zodat we de data kunnen gebruiken
+  const stekjesResponseResponseJSON = await stekjesResponse.json();
+
+  // Render de `stekjes.liquid` template uit de views-map
+  // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
+  response.render("stekjes.liquid", {
+    stekjes: stekjesResponseResponseJSON.data,
+  });
+});
 
 // Zaden
 app.get('/zaden', async function (request, response) {
