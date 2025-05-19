@@ -1,0 +1,122 @@
+<section class="card-collection" id="stekjes">
+  <h2>Beschikbare stekjes</h2>
+
+  <ul class="stekjes-carousel">
+    {% for stekje in stekjes %}
+      <li class="stekje-card">
+        <img
+          src="https://fdnd-agency.directus.app/assets/{{ stekje.foto.id }}"
+          width="{{ stekje.foto.width }}"
+          height="{{ stekje.foto.height }}"
+          alt="{{ stekje.naam }}">
+        <p>{{ stekje.naam }}</p>
+        <a href="/stekje/{{ stekje.id }}" class="button">Bekijk stekje</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="carousel-nav">
+    <button id="prev"></button>
+    <button id="next"></button>
+  </div>
+</section>
+
+<style>
+
+  /* Card collection */
+  .card-collection {
+    padding: 2rem 1rem;
+    background-color: var(--color-primary-dark);
+    color: var(--text-light);
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  .card-collection h2 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+  }
+
+  /* Stekjes carousel */
+  .stekjes-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .stekjes-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Stekje card */
+  .stekje-card {
+    /* Flex gedrag: 0 = niet groeien, 0 = niet krimpen, basisbreedte = dynamisch tussen 150px-350px*/
+    flex: 0 0 auto;
+    width: clamp(150px, 100%, 350px);
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background: var(--color-secondary);
+    color: var(--color-primary-dark);
+    border: 8px solid var(--color-accent-dark);
+
+  }
+
+  .stekje-card img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    border: 10px solid var(--color-accent-dark);
+    display: block;
+  }
+
+  .stekje-card p {
+    font-family: var(--font-header);
+    font-size: var(--font-size-mobile-l);
+    text-align: left;
+
+    /* Voorkom text overflow bij lange stekje naam */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .stekje-card a {
+    align-self: flex-start;
+    margin-top: auto;
+    background-color: var(--color-accent-dark);
+    padding: 0.5em 1.3em;
+  }
+
+  /* Carousel navigatie */
+  .carousel-nav {
+    margin-left: 1em;
+    text-align: start;
+  }
+  .carousel-nav button {
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-accent-dark);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .carousel-nav button:hover {
+    transform: scale(1.2);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+</style>

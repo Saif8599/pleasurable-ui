@@ -32,9 +32,8 @@
 
 body {
   /* Colors */
-
   --color-primary: #4e7141;
-  --color-primary-dark:  #3C593E;
+  --color-primary-dark: #3c593e;
   --color-secondary: #f9e9c2;
   --color-accent: #ff8d06;
   --color-accent-dark: #491b02;
@@ -48,26 +47,61 @@ body {
   --text-accent: #ff8d06;
 
   /* Fonts */
-
-  --font-header: 'Poppins-Black', sans-serif;
-  --font-subheader: 'Poppins-Bold', sans-serif;
+  --font-header: "Poppins-Black", sans-serif;
+  --font-subheader: "Poppins-Bold", sans-serif;
   --font-paragraph: "Poppins-Regular", sans-serif;
-  --font-link: 'Poppins-Regular', sans-serif;
+  --font-link: "Poppins-Regular", sans-serif;
 
+  /* Sizes */
+  --font-size-desktop-xl: 3em;
+  --font-size-desktop-l: 2em;
+  --font-size-desktop-m: 1.3em;
+  --font-size-desktop-s: 1.2em;
+  --font-size-mobile-xl: 2em;
+  --font-size-mobile-l: 1.2em;
+  --font-size-mobile-m: 1em;
+  --font-size-mobile-s: 0.8em;
+
+  /* General styling */
+  font-family: var(--poppins);
+  color: var(--text-dark);
+  background-color: var(--text-light);
+  line-height: 1.4;
+  font-size: var(--font-size-desktop-s);
 }
 
 /* Headings */
-h1 {
-  font-family: var(--font-header);
-  color: var(--text-light);
-}
-
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: var(--font-subheader);
+  color: var(--text-light);
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: var(--font-size-mobile-xl);
+  @media (min-width: 850px) {
+    font-size: var(--font-size-desktop-xl);
+  }
+}
+
+h2 {
+  font-size: var(--font-size-mobile-l);
+  @media (min-width: 850px) {
+    font-size: var(--font-size-desktop-l);
+  }
+}
+
+h3 {
+  font-size: var(--font-size-mobile-m);
+  @media (min-width: 850px) {
+    font-size: var(--font-size-desktop-m);
+  }
 }
 
 p {
@@ -75,22 +109,48 @@ p {
   color: var(--text-body), var(--text-dark);
 }
 
-a {
-  font-family: var(--font-link);
-  text-decoration: none;
-}
-
-p {
-  font-family: var(--poppins);
-  color: #3C593E;
-}
-
 /* Links */
 a {
-  font-family: var(--poppins);
-  color: #FF8D06;
+  font-family: var(--font-paragraph);
+  text-decoration: none;
+  color: #ff8d06;
 }
 
+/* List */
+li, summary {
+  list-style-type: none;
+}
+
+a, button, summary {
+  cursor: pointer;
+}
+
+/* Buttons */
+.button {
+  width: fit-content;
+  padding: 0em 2em;
+  border-radius: 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-decoration: none;
+  margin: 1em 0em;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-bg-main);
+    color: var(--color-accent);
+    scale: 105%;
+  }
+
+  img {
+    height: 1rem;
+    width: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Transition */
 @view-transition {
   navigation: auto;
 }
