@@ -23,27 +23,7 @@ Review de website vervolgens op basis van de onderstaande criteria voor **RAPPE*
 - **P**rogressive **E**nhanced: zijn de verschillende features op de pagina Progressive Enhanced opgebouwd? Pak eventueel de deeltaak _Progressive Enhancement_ er eens bij om te bepalen hoe bepaalde componenten zo gebouwd kunnen worden dat ze het altijd blijven doen. 
 
 **Stap 3: integeren van geleeerde lessen** 
-Wat hebben jullie geleerd van deze code/design review? Zijn er zaken in jullie eigen werkwijze die jullie kunnen verbeteren? Of hebben jullie een mooie ontwerpoplossing gezien? Maak waar nodig nieuwe taken (issues) aan en assign deze binnen jullie team. 
 
-## 2. Voortgangsgesprek 
-In je team heb je duidelijke afspraken gemaakt over jullie werkwijze en hoe jullie elkaar op de hoogte houden van vorderingen. Elk team komt langs bij een tweetal docenten om te vertellen hoe de samenwerking tot zover is gegaan. Zorg dat je het Project Board, de verschillende branches en de pull requests bij de hand hebt. 
-
-
-**Bij Krijn & Charley:**
-| Tijd     | Teams |
-| ----------- | ----------- |
-| 10:00-10:45  | Mediahuis 1G	+ DDA 1H     |
-| 10:45-11:30  | Drop & Heal 1G	+ Tumi Mundo 1G   |
-| 11:30-12:15  | Oncollaboration      |
-| 12:15-13:00  | DDA 1G	 + Drop Heal 1H  |
-
-**Bij Koop & Suus:**
-| Tijd     | Teams |
-| ----------- | ----------- |
-| 10:00-10:45  | Milledoni 1G	+ Bieb in Bloei 1H    |
-| 10:45-11:30  | Bieb in Bloei 1G	+ Mediahuis 1H  |
-| 11:30-12:15  | Qatar      |
-| 12:15-13:00  | Tumi Mundo 1H	+ Milledoni 1H  |
 
 <!-- 
 
