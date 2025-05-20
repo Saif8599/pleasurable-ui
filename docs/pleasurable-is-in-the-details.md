@@ -13,7 +13,7 @@ Nog iets met het archief van https://littlebigdetails.com/archive ? Was tussen 2
 Teams/Whiteboard opdracht met https://tympanus.net/codrops/category/articles/ui-interactions-animations-roundups/ ook nog wel vet misschien
 
 -->
-👉 Check de verzameling 'Pleasurable is in the details' op [LittleBigDetails.com](https://littlebigdetails.com/archive). Post een leuk voorbeeld van een Pleasurable UI in Teams.
+👉 Check de verzameling 'Pleasurable is in the details' op [LittleBigDetails.com](https://littlebigdetails.com/archive). Post een link naar een leuk voorbeeld in Teams.
 
 
 ## Hierarchy of User Needs
@@ -103,7 +103,7 @@ Deze button wil heel graag geklikt worden. Het komt een beetje naar de cursor to
 
 
 
-De hover state over de elementen geeft mooie feedback met animaties, de visuele elementen komen in de vervolgpagina terug. 
+De hover state over de elementen geeft mooie feedback met animaties, de visuele elementen komen in de detailpagina terug. 
 
 #### Slicke Slideshow
 
@@ -161,4 +161,4 @@ Je hebt in Sprint 9 of 10 een formulier `POST` verrijkt met een client-side scri
 Maar er zijn ook interacties die via `GET` requests gaan. Denk aan filteren en sorteren, zoeken, of bijvoorbeeld pagineren, of simpelweg navigeren tussen pagina's. Ook deze kun je meer pleasurable maken, met bijvoorbeeld een soepele overgang tussen pagina's, of een vette animatie terwijl je filtert. 
 <!-- Hiervoor heb je al kort met multi-page View Transitions gespeeld, maar in het ontwerp kunnen we ook wat meer tijd steken.-->
 
-Kies een interactie uit je project of bedenk een nieuwe. Ontwerp een prototype met animatie in Figma met een pleasurable animatie. Gebruik de huisstijl van de opdrachtgever. 
+Kies een interactie uit je project of bedenk een nieuwe. Maak een prototype met animatie in Figma met een pleasurable animatie. Gebruik de huisstijl van de opdrachtgever. 
