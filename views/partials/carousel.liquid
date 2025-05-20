@@ -1,0 +1,86 @@
+<section class="photo-collection">
+  <ul class="photo-carousel">
+    {% for stekjeImage in stekjesImages %}
+      <li class="photo-item">
+        <picture>
+            {% comment %} Resolution switching {% endcomment %}
+          <source
+            media="(max-width: 500px)"
+            srcset="https://fdnd-agency.directus.app/assets/{{ stekjeImage.foto }}?format=avif&width=300"
+            type="image/avif"
+            loading="lazy">
+
+            {% comment %} Webp format {% endcomment %}
+          <source
+            srcset="https://fdnd-agency.directus.app/assets/{{ stekjeImage.foto }}?format=webp&width=300"
+            type="image/webp"
+            loading="lazy">
+
+            {% comment %} Fallback {% endcomment %}
+          <img
+            src="https://fdnd-agency.directus.app/assets/{{ stekjeImage.foto }}?width=600"
+            alt="{{ stekjeImage.types }} carousel foto"
+            loading="lazy"
+            style="background: #969494;">
+        </picture>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="carousel-nav">
+    <button id="prev"></button>
+    <button id="next"></button>
+  </div>
+</section>
+<style>
+
+  /* Photo collection */
+  .photo-collection {
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  /* Photo arousel */
+  .photo-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+
+
+  /* Photo item */
+  .photo-item img {
+    height: 400px;
+    width: auto;
+    border-radius: 1rem;
+    display: block;
+  }
+
+  /* Carousel navigatie */
+  .carousel-nav {
+    margin-top: 1em;
+    margin-left: 1em;
+    text-align: start;
+  }
+  .carousel-nav button {
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-accent-dark);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .carousel-nav button:hover {
+    transform: scale(1.2);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2em;
+    }
+  }
+</style>
