@@ -14,3 +14,35 @@
         </svg>
     </a>
 </section>
+
+<style>
+.description {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  bottom: 2em;
+
+ & a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+ }
+
+ & p {
+  font-weight: 900; 
+ }
+}
+
+@media (min-width: 768px) {
+  .description {
+    max-width: 95%; 
+  }
+}
