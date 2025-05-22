@@ -117,12 +117,16 @@ a {
 }
 
 /* List */
-li {
+li, summary {
   list-style-type: none;
 }
 
+a, button, summary {
+  cursor: pointer;
+}
+
 /* Buttons */
-.button {
+/* .button {
   width: fit-content;
   padding: 0em 2em;
   border-radius: 2rem;
@@ -144,6 +148,78 @@ li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+} */
+/* algemene button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: var(--font-size-mobile-s);
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  & svg{
+    height: 1rem;
+    width: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &:hover {
+    scale: 105%;
+    transition: scale 0.2s ease;
+  }
+}
+
+@media (min-width: 786px) {
+  .btn {
+    font-size: var(--font-size-desktop-s);
+    & svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  
+}
+
+/* Bekijk de (pagina-naam) */
+.btn-green {
+  background-color: var(--color-primary);
+  color: var(--color-bg-secondary);
+}
+
+.btn-green:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* aanmelden buttons */
+.btn-brown {
+  background-color: var(--color-accent-dark);
+  color: var(--color-bg-secondary);
+}
+
+.btn-brown:hover {
+  background-color: var(--color-accent);
+}
+
+/* verzend buttons */
+.btn-orange {
+  background-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-accent-dark);
+  color: var(--color-accent);
+}
+/* titel kleuren */
+.highlight-brown {
+  color: var(--color-accent-dark);
+}
+
+.highlight-green {
+  color: var(--color-primary);
 }
 
 /* Transition */
