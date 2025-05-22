@@ -29,7 +29,7 @@ app.set("views", "./views");
 // Ik maak hier een functie aan die specifieke pagina data ophaalt van de API
 async function fetchPageContent(key) {
   // Ik wil eerst alle data ophalen van alle pagina's
-  const response = await fetch(`${API_BASE_URL}/bib_pagina`);
+  const response = await fetch(`${API_BASE_URL}/bib_content`);
 
   // Daarna zet ik de opgehaalde data om naar JSON, zodat ik ermee kan werken
   const json = await response.json();
