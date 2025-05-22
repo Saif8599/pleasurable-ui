@@ -41,6 +41,27 @@ async function fetchPageContent(key) {
   return pageContent;
 }
 
+// Hier maak ik een route aan die reageert op alle pagina's zoals /zaden, /partners etc.
+// :key betekent dat het stukje na de slash (zoals 'zaden') automatisch wordt opgevangen als parameter
+app.get("/:key", async function (request, response) {
+
+  // Ik haal de waarde op uit de URL die is meegegeven als parameter
+  // Bijvoorbeeld als je naar /zaden ga, dan wordt key automatisch 'zaden'
+   const key = request.params.key;
+
+   // Ik roep nu mijn functie aan die de content ophaalt van de juiste pagina
+   // Die functie zoekt in de API data naar het object waarvan key gelijk is aan 'zaden'
+   const content = await fetchPageContent(key);
+
+     // Hier render ik de juiste Liquid template (zoals zaden.liquid)
+     // Tegelijk geef ik de titel en tekst mee aan de pagina als variabelen
+     // Deze worden in de .liquid file opgevangen met {{ headerTitle }} en {{ headerText }}
+    response.render(`${key}.liquid`, {
+      headerTitle: content.title,
+      headerText: content.text
+    }); 
+  });
+
 // Home
 app.get("/", async function (request, response) {
   response.render("index.liquid");
