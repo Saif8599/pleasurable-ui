@@ -1,0 +1,48 @@
+{% render 'partials/head.liquid' %}
+
+<section class="description">
+    <h2>
+        <span class="highlight-brown">Over de</span>
+        <span class="highlight-green">{{ headerTitle }}</span>
+    </h2>
+
+    <p>{{ headerText }}</p>
+    <a href="/" class="btn btn-green">
+        Bekijk de {{ headerTitle }}
+        <svg width="32" height="33" viewBox="0 0 32 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30.2051 13.9544L5.02757 0.852381C3.03041 -0.186914 0.6427 1.26221 0.6427 3.51361V29.1222C0.6427 31.3489 2.98308 32.7996 4.97731 31.809L30.1549 19.3025C32.3522 18.211 32.3815 15.087 30.2051 13.9544Z" fill="currentColor"/>
+        </svg>
+    </a>
+</section>
+
+<style>
+.description {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  bottom: 2em;
+
+ & a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+ }
+
+ & p {
+  font-weight: 900; 
+ }
+}
+
+@media (min-width: 768px) {
+  .description {
+    max-width: 95%; 
+  }
+}
