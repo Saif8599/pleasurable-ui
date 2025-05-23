@@ -1,17 +1,70 @@
-<ul>
+<ul class="workshops">
     <li>
         <picture>
             <img src="" alt="">
         </picture>
         <div>
-            <h2></h2>
-            <address></address>
-            <p></p>
-            <time></time>
-            <time></time>
+            <h2>Stekjes maken</h2>
+            <address>OBA Linnaeusstraat</address>
+            <p>Gratis</p>
+            <time>13:00</time>
+            <time>03/19/2023</time>
+            <a class="button" href="">Aanmelden</a>
         </div>
     </li>
 </ul>
 
 
 {% comment %} styling {% endcomment %}
+ <style>
+    .workshops {
+        li {
+            border-radius: 1rem;
+            display: flex;
+            background-color: var(--color-secondary);
+            list-style: none;
+            min-height: 15rem;
+            margin: 2rem;
+            padding: 1rem;
+            
+
+            picture {
+                margin-right: 1rem;
+                img {
+                    height: 100%;
+                    width: 20vw;
+                    border-radius: 1rem;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+                h2, address, p, time, a {
+                    font-family: var(--font-paragraph);
+                    word-break: break-all;
+                    font-weight: 600;
+                    color: var(--text-dark);
+                    font-size: var(--font-size-mobile-m);
+
+                    @media (max-width: 400px) {
+                        font-size: var(--font-size-mobile-s);
+                    }
+                }
+
+                a {
+                    background-color: var(--color-accent-dark);
+                    color: var(--color-secondary);
+                }
+            }
+
+        }
+
+        @media (min-width: 1030px) {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+        }
+    }
+ </style>
