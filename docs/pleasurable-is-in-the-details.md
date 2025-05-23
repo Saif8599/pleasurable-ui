@@ -1,7 +1,7 @@
 # Pleasurable User Interface
 
 ## Pleasurable is in the details
-Over het ontwerpen en bouwen van de pleasurable laag van interactie.
+Over het ontwerpen van de pleasurable laag van interactie.
 
 ### Aanpak
 Vandaag ga je met je team convergeren en divergeren op het design van je website. Eerst ga je leren wat pleasurable UI is aan de hand van de _Hierarchy of User Needs_ piramide. Daarna ga je in Figma pleasurable UI ontwerpen en animeren.
@@ -136,6 +136,8 @@ Gebruik de volgende bronnen om onderstaande opdrachten te maken.
 
 - [Animation basics in Figma @ YouTube](https://www.youtube.com/watch?v=02fO4qVnbc0) + [Figma design file](https://www.figma.com/community/file/1198305561541816622)
 - [Mastering Animations in Figma by Building 7 Common UI Animations](https://www.jurn.io/figma-animation-examples/) + [Figma design file](https://www.figma.com/community/file/866532393298219995)
+- [Create prototypes @ Figma](https://help.figma.com/hc/en-us/sections/360006534454-Create-prototypes)
+- [Prototype animations @ Figma](https://help.figma.com/hc/en-us/articles/360040522373-Prototype-animations)
 - Voor inspiratie: [UI Interactions and Animations Roundups @ Codrops](https://tympanus.net/codrops/category/articles/ui-interactions-animations-roundups/)
 - Uit Sprint 6: [How to Apply Disney’s 12 Principles of Animation to UI Design](https://www.interaction-design.org/literature/article/ui-animation-how-to-apply-disney-s-12-principles-of-animation-to-ui-design)
 
@@ -162,3 +164,6 @@ Maar er zijn ook interacties die via `GET` requests gaan. Denk aan filteren en s
 <!-- Hiervoor heb je al kort met multi-page View Transitions gespeeld, maar in het ontwerp kunnen we ook wat meer tijd steken.-->
 
 Kies een interactie uit je project of bedenk een nieuwe. Maak een prototype met animatie in Figma met een pleasurable animatie. Gebruik de huisstijl van de opdrachtgever. 
+
+
+Woensdag gaan we deze prototype uitwerken in code, dus zorg dat je dan drie ontwerpen klaar hebt staan.
