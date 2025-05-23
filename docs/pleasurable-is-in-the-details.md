@@ -1,7 +1,7 @@
 # Pleasurable User Interface
 
 ## Pleasurable is in the details
-Over het ontwerpen en bouwen van de pleasurable laag van interactie.
+Over het ontwerpen van de pleasurable laag van interactie.
 
 ### Aanpak
 Vandaag ga je met je team convergeren en divergeren op het design van je website. Eerst ga je leren wat pleasurable UI is aan de hand van de _Hierarchy of User Needs_ piramide. Daarna ga je in Figma pleasurable UI ontwerpen en animeren.
@@ -13,7 +13,7 @@ Nog iets met het archief van https://littlebigdetails.com/archive ? Was tussen 2
 Teams/Whiteboard opdracht met https://tympanus.net/codrops/category/articles/ui-interactions-animations-roundups/ ook nog wel vet misschien
 
 -->
-👉 Check de verzameling 'Pleasurable is in the details' op [LittleBigDetails.com](https://littlebigdetails.com/archive). Post een leuk voorbeeld van een Pleasurable UI in Teams.
+👉 Check de verzameling 'Pleasurable is in the details' op [LittleBigDetails.com](https://littlebigdetails.com/archive). Post een link naar een leuk voorbeeld in Teams.
 
 
 ## Hierarchy of User Needs
@@ -103,7 +103,7 @@ Deze button wil heel graag geklikt worden. Het komt een beetje naar de cursor to
 
 
 
-De hover state over de elementen geeft mooie feedback met animaties, de visuele elementen komen in de vervolgpagina terug. 
+De hover state over de elementen geeft mooie feedback met animaties, de visuele elementen komen in de detailpagina terug. 
 
 #### Slicke Slideshow
 
@@ -136,6 +136,8 @@ Gebruik de volgende bronnen om onderstaande opdrachten te maken.
 
 - [Animation basics in Figma @ YouTube](https://www.youtube.com/watch?v=02fO4qVnbc0) + [Figma design file](https://www.figma.com/community/file/1198305561541816622)
 - [Mastering Animations in Figma by Building 7 Common UI Animations](https://www.jurn.io/figma-animation-examples/) + [Figma design file](https://www.figma.com/community/file/866532393298219995)
+- [Create prototypes @ Figma](https://help.figma.com/hc/en-us/sections/360006534454-Create-prototypes)
+- [Prototype animations @ Figma](https://help.figma.com/hc/en-us/articles/360040522373-Prototype-animations)
 - Voor inspiratie: [UI Interactions and Animations Roundups @ Codrops](https://tympanus.net/codrops/category/articles/ui-interactions-animations-roundups/)
 - Uit Sprint 6: [How to Apply Disney’s 12 Principles of Animation to UI Design](https://www.interaction-design.org/literature/article/ui-animation-how-to-apply-disney-s-12-principles-of-animation-to-ui-design)
 
@@ -161,4 +163,7 @@ Je hebt in Sprint 9 of 10 een formulier `POST` verrijkt met een client-side scri
 Maar er zijn ook interacties die via `GET` requests gaan. Denk aan filteren en sorteren, zoeken, of bijvoorbeeld pagineren, of simpelweg navigeren tussen pagina's. Ook deze kun je meer pleasurable maken, met bijvoorbeeld een soepele overgang tussen pagina's, of een vette animatie terwijl je filtert. 
 <!-- Hiervoor heb je al kort met multi-page View Transitions gespeeld, maar in het ontwerp kunnen we ook wat meer tijd steken.-->
 
-Kies een interactie uit je project of bedenk een nieuwe. Ontwerp een prototype met animatie in Figma met een pleasurable animatie. Gebruik de huisstijl van de opdrachtgever. 
+Kies een interactie uit je project of bedenk een nieuwe. Maak een prototype met animatie in Figma met een pleasurable animatie. Gebruik de huisstijl van de opdrachtgever. 
+
+
+Woensdag gaan we deze prototype uitwerken in code, dus zorg dat je dan drie ontwerpen klaar hebt staan.
