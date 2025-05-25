@@ -32,29 +32,7 @@
     <button id="next"></button>
   </div>
 </section>
-<script>
-      const carousel = document.querySelector('.photo-carousel');
-      const photo = document.querySelectorAll('.photo-item');
-      const prevBtn = document.getElementById('prev');
-      const nextBtn = document.getElementById('next');
 
-      let currentIndex = 0;
-
-      function scrollToPhoto(index) {
-       // Zorg dat de index binnen de geldige grenzen valt
-      currentIndex = Math.max(0, Math.min(index, photo.length - 1));
-
-      // Scroll naar de geselecteerde foto
-      photo[currentIndex].scrollIntoView({
-        behavior: 'smooth',  // Animatiescroll
-        block: 'nearest',    // Verticale uitlijning
-        inline: 'center'     // Horizontale uitlijning
-      });
-      }
-
-      nextBtn.addEventListener('click', () => scrollToPhoto(currentIndex + 1));
-      prevBtn.addEventListener('click', () => scrollToPhoto(currentIndex - 1));
-</script>
 <style>
 
   /* Photo collection */
