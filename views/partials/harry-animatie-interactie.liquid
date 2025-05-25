@@ -87,24 +87,6 @@
   </defs>
 </svg>
 
-<script>
-    const leftarm = document.querySelector('.arm-l');
-    const harry = document.querySelector('.cartoon');
-    
-    harry.addEventListener('mouseenter', movearm)
-    harry.addEventListener('mouseleave', dontmovearm)
-
-    function movearm() {
-        leftarm.classList.add('movearm')
-    }
-
-    function dontmovearm() {
-        leftarm.classList.remove('movearm')
-    }
-
-</script>
-
-
 <style>
 .movearm {
     transform-origin: top right;
