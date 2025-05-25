@@ -1,7 +1,7 @@
 <section class="photo-collection">
-  <ul class="photo-carousel">
+  <ul class="photo-carousel carousel">
     {% for image in images %}
-      <li class="photo-item">
+      <li class="photo-item" data-label="{{ image.id }}">
         <picture>
             {% comment %} Resolution switching {% endcomment %}
           <source
@@ -26,11 +26,6 @@
       </li>
     {% endfor %}
   </ul>
-
-  <div class="carousel-nav">
-    <button id="prev"></button>
-    <button id="next"></button>
-  </div>
 </section>
 
 <style>
@@ -45,9 +40,11 @@
   /* Photo arousel */
   .photo-carousel {
     display: flex;
-    overflow-x: auto;
     gap: 1.2rem;
     padding: 1rem;
+
+    /* Fallback */
+    overflow-x: auto;
   }
 
 
@@ -59,29 +56,40 @@
     display: block;
   }
 
-  /* Carousel navigatie */
-  .carousel-nav {
-    margin-top: 1em;
-    margin-left: 1em;
-    text-align: start;
-  }
-  .carousel-nav button {
-    height: 50px;
-    width: 50px;
-    background-color: var(--color-accent-dark);
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .carousel-nav button:hover {
-    transform: scale(1.2);
-  }
+  /* Css Carousel */
+  .carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
-  @media (min-width: 768px) {
-    .carousel-nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2em;
+    > li {
+      scroll-snap-align: center;
+    }
+
+    &::scroll-button(*) {
+      height: 50px;
+      width: 50px;
+      background-color: var(--color-accent-dark);
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+
+    &::scroll-button(left) {
+      position-area: inline-start center;
+      content: "" / "Scroll Left";
+    }
+
+    &::scroll-button(right) {
+      position-area: inline-end center;
+      content: "" / "Scroll Right";
+    }
+
+     &::scroll-button(*):focus-visible {
+      outline-offset: 5px;
+    }
+     &::scroll-button(*):hover {
+      transform: scale(1.2);
     }
   }
 </style>
