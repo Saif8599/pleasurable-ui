@@ -63,7 +63,17 @@ app.get("/geveltuin", async function (request, response) {
 
 // Agenda
 app.get("/agenda", async function (request, response) {
-  response.render("agenda.liquid");
+  const workshopsResponse = await fetch(
+    `${API_BASE_URL}/bib_workshops`
+  );
+
+  const workshopsResponseResponseJSON = await workshopsResponse.json();
+
+  console.log(workshopsResponseResponseJSON);
+
+  response.render("agenda.liquid", {
+    workshops: workshopsResponseResponseJSON.data,
+  });
 });
 
 // Partners

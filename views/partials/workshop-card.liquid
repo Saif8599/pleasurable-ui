@@ -1,17 +1,19 @@
 <ul class="workshops">
+    {% for workshop in workshops %}
     <li>
         <picture>
             <img src="" alt="">
         </picture>
         <div>
             <h2>Stekjes maken</h2>
-            <address>OBA Linnaeusstraat</address>
-            <p>Gratis</p>
-            <time>13:00</time>
-            <time>03/19/2023</time>
+            <address>{{ workshop.locatie }}</address>
+            <p>{{ workshop.kosten }}</p>
+            <time></time>
+            <time></time>
             <a class="button" href="">Aanmelden</a>
         </div>
     </li>
+    {% endfor %}
 </ul>
 
 
