@@ -163,15 +163,15 @@
 .torso {
   transform-origin: center;
   transform-box: fill-box;
-  animation: move-arm 2s ease-in-out infinite;
+  animation: move 2s ease-in-out infinite;
 }
 
-@keyframes move-arm {
+@keyframes move {
   0% {
       transform: translateY(0px);
   }
   50% {
-      transform: translateY(10px); /* or negative to move up first */
+      transform: translateY(10px);
   }
   100% {
       transform: translateY(0px);
