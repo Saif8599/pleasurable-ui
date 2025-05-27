@@ -2,13 +2,13 @@
     {% for workshop in workshops %}
     <li>
         <picture>
-            <img src="" alt="">
+            <img src="https://fdnd-agency.directus.app/items/bib_workshops/assets/{{ stekje.foto }}" alt="">
         </picture>
         <div>
-            <h2>Stekjes maken</h2>
+            <h2>{{ workshop.naam }}</h2>
             <address>{{ workshop.locatie }}</address>
             <p>{{ workshop.kosten }}</p>
-            <time></time>
+            <time>{{ workshop.datum }}</time>
             <time></time>
             <a class="button" href="">Aanmelden</a>
         </div>
