@@ -50,9 +50,9 @@ Met een coach bespreek je met je team jullie vorderingen. In je team heb je duid
 **Bij Krijn & Charley:**
 | Tijd     | Teams |
 | ----------- | ----------- |
-| 10:00-10:45  | Milledoni 1H	+ Bieb in Bloei 1G    |
-| 10:45-11:30  | Bieb in Bloei 1H	+ Tumi Mundo 1H  |
-| 11:30-12:15  | Mediahuis 1H	+ Milledoni 1G       |
+| 10:00-10:45  | Tumi Mundo 1H	+ Bieb in Bloei 1G    |
+| 10:45-11:30  | Bieb in Bloei 1H	+ Mediahuis 1H  |
+| 11:30-12:15  | Milledoni 1H	+ Milledoni 1G       |
 | 12:15-13:00  | Qatar  |
 
 **Bij Koop & Suus:**

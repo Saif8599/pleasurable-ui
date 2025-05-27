@@ -2,17 +2,16 @@
 
 
 ## Wrap-Up
-Hoe ver ben je gekomen? Laatste dingen afmaken, code mergen, documentatie op orde brengen, presentatie voorbereiden.
+In de wrap-up ga je de Sprint Review voorbereiden. Wat ga je aan de oprachtgever presenteren? Hoe ga je dat doen? Welke vraag ?
 
 
+### Sprint review voorbereiden
+
+Ga met je team de Sprint Review voorbereiden. Bedenk hoe jullie de website gaan presenteren, en aan welke vraag of feedback van de opdrachtgever jullie hebben gewerkt.
+
+Zorg dat je in de sprint review duidelijk welke vraag van de opdrachtgever je hebt uitgewerkt. Pak de aantekeningen van de vorige sprint-review er nog eens bij. 
 
 
-<!--
-## Aanpak
-
-
-
--->
 
 <!--
 Retro sprint 11
