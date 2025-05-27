@@ -32,28 +32,39 @@ app.get("/", async function (request, response) {
 });
 
 // Stekjes
-app.get("/stekjes", async function (request, response) {
-  // Haal alle stekjes op vanuit de WHOIS API door een fetch-verzoek te sturen naar de eindpoint `/bib_stekjes`
-  const stekjesImagesResponse = await fetch(
-    `${API_BASE_URL}/bib_afbeeldingen?filter[type]=stekjes`
-  );
+app.get("/stekjes", async function (req, res) {
+  // Haal de volledige lijst op van alle afbeeldingen
+  const response = await fetch(`${API_BASE_URL}/bib_afbeeldingen`);
 
-  // Zet het response-object om naar JSON-formaat, zodat we de data kunnen gebruiken
-  const stekjesImagesResponseResponseJSON = await stekjesImagesResponse.json();
+  // Zet de data om naar JSON zodat je ermee kunt werken
+  const json = await response.json();
 
-  // Test of data word meegegeven
-  console.log(stekjesImagesResponseResponseJSON);
+  // Filter alleen de afbeeldingen waarvan het type 'stekjes' is
+  const stekjesImages = json.data.filter((image) => image.type === "stekjes");
 
   // Render de `stekjes.liquid` template uit de views-map
-  // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
-  response.render("stekjes.liquid", {
-    stekjesImages: stekjesImagesResponseResponseJSON.data,
+  // Geef de opgehaalde data mee als een variabele genaamd `images`, zodat deze in de template gebruikt kan worden
+  res.render("stekjes.liquid", {
+    images: stekjesImages, // hier zitten alleen de stekjesfoto’s in
   });
 });
 
 // Zaden
-app.get("/zaden", async function (request, response) {
-  response.render("zaden.liquid");
+app.get("/zaden", async function (req, res) {
+  // Haal de volledige lijst op van alle afbeeldingen
+  const response = await fetch(`${API_BASE_URL}/bib_afbeeldingen`);
+
+  // Zet de data om naar JSON zodat je ermee kunt werken
+  const json = await response.json();
+
+  // Filter alleen de afbeeldingen waarvan het type 'zaden' is
+  const zadenImages = json.data.filter((image) => image.type === "zaden");
+
+  // Render de `zaden.liquid` template uit de views-map
+  // Geef de opgehaalde data mee als een variabele genaamd `images`, zodat deze in de template gebruikt kan worden
+  res.render("zaden.liquid", {
+    images: zadenImages, // hier zitten alleen de zadenfoto’s in
+  });
 });
 
 // Geveltuin
