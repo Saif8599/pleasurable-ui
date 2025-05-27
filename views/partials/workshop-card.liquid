@@ -8,8 +8,8 @@
             <h2>{{ workshop.naam }}</h2>
             <address>{{ workshop.locatie }}</address>
             <p>{{ workshop.kosten }}</p>
-            <time>{{ workshop.datum }}</time>
-            <time></time>
+            <time>{{ workshop.datum | date: "%H:%M" }}</time>
+            <time>{{ workshop.datum | date: "%-d %B %Y" }}</time>
             <a class="btn btn-brown" href="">Aanmelden 
                 <svg width="32" height="33" viewBox="0 0 32 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30.2051 13.9544L5.02757 0.852381C3.03041 -0.186914 0.6427 1.26221 0.6427 3.51361V29.1222C0.6427 31.3489 2.98308 32.7996 4.97731 31.809L30.1549 19.3025C32.3522 18.211 32.3815 15.087 30.2051 13.9544Z" fill="currentColor"/>
@@ -57,6 +57,7 @@
                     font-weight: 600;
                     color: var(--text-dark);
                     font-size: var(--font-size-mobile-m);
+                    margin-bottom: .7rem;
                     
                     @media (max-width: 400px) {
                         font-size: var(--font-size-mobile-s);
@@ -67,6 +68,7 @@
                     color: var(--color-secondary);
                     width: fit-content;
                     padding: 0.1rem 1.5rem;
+                    margin-top: 1rem;
                 }
             }
 
