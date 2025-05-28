@@ -57,13 +57,19 @@ app.get("/:key", async function (request, response) {
      // Deze worden in de .liquid file opgevangen met {{ headerTitle }} en {{ headerText }}
     response.render(`${key}.liquid`, {
       headerTitle: content.title,
-      headerText: content.text
+      headerText: content.text,
+      headerImage: content.image
     }); 
   });
 
 // Home
 app.get("/", async function (request, response) {
-  response.render("index.liquid");
+  const content = await fetchPageContent("home");
+  response.render("index.liquid", {
+    headerTitle: content.title,
+    headerText: content.text,
+    headerImage: content.image
+  });
 });
 
 // Stekjes
