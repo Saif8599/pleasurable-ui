@@ -15,18 +15,24 @@ De Bieb in Bloei website bestaat uit:
 - Partners pagina - hier staat weer onder de header een informatieblok. Daaronder staan in blokken de partners van Bieb in Bloei.
 - Contact pagina - op deze pagina staat aan de linker kant een form die je kan invullen als je interesse hebt in workshops, events en activiteiten. Aan de rechterkant van het form staat in een maps view de locatie van 'Oba Linnaeus'.
 
-## Design
-Figma document: https://www.figma.com/design/rAUnwuAdidiFPfgPXgxWVz/BIB-team?node-id=0-1&t=waIufYPtiFGG1bUt-1
+## Ontwerpkeuzes
+Figma designs: https://www.figma.com/design/rAUnwuAdidiFPfgPXgxWVz/BIB-team?node-id=0-1&t=waIufYPtiFGG1bUt-1
+
+## Kenmerken
+(makkelijk uitleggen)
+
+## Performance
 
 
-Ontwerpkeuzes uitleggen met ondersteuning van foto of video van het eindresultaat
-Figma bestand
-Gebruik
-Waarom willen mensen de website gebruiken
-Kenmerken (begrijpelijke manier uitleggen voor Mariska!! Wat betekent het voor de eindgebruiker??)
-Performance
-Toegankelijkheid
-Andere principes + standaarden uitleggen
-Installatie
-Hoe hebben we de website gebouwd aan de hand van liquid templates, NodeJS etc
-Bronnen
+## Toegankelijkheid
+De website is getest door de lighthouse test in je browser. Daaruit kwam een mooie uitslag van 93%.
+![image](https://github.com/user-attachments/assets/d16a8253-9a25-48cf-bff9-db972d6e3720)
+
+Verder kan je door de hele website tabben en is er rekening gehouden met het contrast tussen voorgrond en achtergrond. Bij het testen van het contrast kwam er wel 1 min punt uit en dat is dat de witte tekst en de créme achtergrond een te lage contrast hebben. Dit gaat aangepast worden mochten we hiermee verder gaan.
+![image](https://github.com/user-attachments/assets/58f361d5-f41b-4783-9811-61ebab4511d1)
+
+(principes en standaarden)
+
+## Installatie
+
+## Bronnen
