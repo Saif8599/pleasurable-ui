@@ -2,11 +2,12 @@
 
 <header class="hero">
   <picture>
-    <source type="image/avif" srcset="/assets/bib-hero2.avif">
-    <source type="image/webp" srcset="/assets/bib-hero2.webp">
-    <img src="/assets/bib-hero2.png" alt="" width="1280" height="720">
+    <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ headerImage }}?format=avif&width=1600">
+    <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ headerImage }}?format=webp&width=1600">
+    <img src="https://fdnd-agency.directus.app/assets/{{ headerImage }}?width=1600" alt="{{ headerTitle }}" width="1600" height="900">
   </picture>
-  <h1>stekjes</h1>
+  <div class="overlay"></div>
+  <h1>{{ headerTitle }}</h1>
 </header>
 
 <style>
@@ -39,6 +40,7 @@
 
   .hero h1 {
     font-size: var(--font-size-desktop-xl);
+    max-width: 80%;
   }
 }
 </style> 
