@@ -26,34 +26,54 @@ app.engine("liquid", engine.express());
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set("views", "./views");
 
-// Home
-app.get("/", async function (request, response) {
-  response.render("index.liquid");
-});
+// Ik maak hier een functie aan die specifieke pagina data ophaalt van de API
+async function fetchPageContent(key) {
+  // Ik wil eerst alle data ophalen van alle pagina's
+  const response = await fetch(`${API_BASE_URL}/bib_content`);
 
-// Stekjes
-app.get("/stekjes", async function (request, response) {
-  // Haal alle stekjes op vanuit de WHOIS API door een fetch-verzoek te sturen naar de eindpoint `/bib_stekjes`
-  const stekjesImagesResponse = await fetch(
-    `${API_BASE_URL}/bib_afbeeldingen?filter[type]=stekjes`
-  );
+  // Daarna zet ik de opgehaalde data om naar JSON, zodat ik ermee kan werken
+  const json = await response.json();
 
-  // Zet het response-object om naar JSON-formaat, zodat we de data kunnen gebruiken
-  const stekjesImagesResponseResponseJSON = await stekjesImagesResponse.json();
+  // Nu zoek ik in de lijst naar het ene object waarvan de key gelijk is aan de meegegeven parameter
+  const pageContent = json.data.find((page) => page.key === key);
 
-  // Test of data word meegegeven
-  console.log(stekjesImagesResponseResponseJSON);
+  // En dan geef ik dat ene stukje data terug, zodat ik het later in mijn routes kan gebruiken
+  return pageContent;
+}
 
-  // Render de `stekjes.liquid` template uit de views-map
-  // Geef de opgehaalde data mee als een variabele genaamd `stekjes`, zodat deze in de template gebruikt kan worden
-  response.render("stekjes.liquid", {
-    stekjesImages: stekjesImagesResponseResponseJSON.data,
+// Hier maak ik een route aan die reageert op alle pagina's zoals /zaden, /partners etc.
+// :key betekent dat het stukje na de slash (zoals 'zaden') automatisch wordt opgevangen als parameter
+app.get("/:key", async function (request, response) {
+  // Ik haal de waarde op uit de URL die is meegegeven als parameter
+  // Bijvoorbeeld als je naar /zaden ga, dan wordt key automatisch 'zaden'
+  const key = request.params.key;
+
+  // Haal de volledige lijst op van alle afbeeldingen
+  const res = await fetch(`${API_BASE_URL}/bib_afbeeldingen`);
+
+  // Zet de data om naar JSON zodat je ermee kunt werken
+  const json = await res.json();
+
+  // Filter alleen de afbeeldingen waarvan het type ':key' is
+  const stekjesImages = json.data.filter((image) => image.type === key);
+
+  // Ik roep nu mijn functie aan die de content ophaalt van de juiste pagina
+  // Die functie zoekt in de API data naar het object waarvan key gelijk is aan 'zaden'
+  const content = await fetchPageContent(key);
+
+  // Hier render ik de juiste Liquid template (zoals zaden.liquid)
+  // Tegelijk geef ik de titel en tekst mee aan de pagina als variabelen
+  // Deze worden in de .liquid file opgevangen met {{ headerTitle }} en {{ headerText }}
+  response.render(`${key}.liquid`, {
+    headerTitle: content.title,
+    headerText: content.text,
+    images: stekjesImages, // hier zitten alleen de foto’s in
   });
 });
 
-// Zaden
-app.get("/zaden", async function (request, response) {
-  response.render("zaden.liquid");
+// Home
+app.get("/", async function (request, response) {
+  response.render("index.liquid");
 });
 
 // Geveltuin

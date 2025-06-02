@@ -1,0 +1,233 @@
+<section class="signup-form">
+  <div class="signup-form-content">
+    <h2 class="signup-form-title">Meld je aan</h2>
+    <p class="signup-form-description">Ben jij net als ons ook zo gek van planten, biodiversiteit, natuur en gezondheid? En heb je een vraag, verzoek, opmerking, compliment of wil je je aanmelden voor een van onze workshops, events of activiteiten? Vul dan het formulier hieronder in:</p>
+
+    <form
+      action="/contact/submit"
+      method="post"
+      onsubmit="">
+
+      <div class="form-field">
+        <fieldset class="question">
+          <legend class="question-title">Reden voor contact:</legend>
+
+          <div class="radio-option">
+            <input
+              class="radio-question"
+              type="radio"
+              id="question"
+              name="contact-reason"
+              value="question">
+            <label for="question">Ik heb een vraag</label>
+          </div>
+
+          <div class="radio-option">
+            <input
+              class="radio-question"
+              type="radio"
+              id="workshop"
+              name="contact-reason"
+              value="workshop">
+            <label class="form-title" for="workshop">Ik wil mij aanmelden voor een workshop</label>
+          </div>
+        </fieldset>
+
+        <label for="name">*Naam:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Voer je naam in.">
+        <label for="email">*E-mail:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          required
+          placeholder="Voer je e-mail in.">
+
+        <label for="message">Stel je vraag, of vertel voor welke workshop je je wilt aanmelden:
+        </label>
+        <textarea
+          type="text"
+          id="message"
+          name="message"
+          placeholder="Typ hier je bericht."></textarea>
+      </div>
+
+      <button
+        class="btn btn-orange"
+        type="submit"
+        id="submit-button">Verzenden
+        <svg
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.2051 13.9544L5.02757 0.852381C3.03041 -0.186914 0.6427 1.26221 0.6427 3.51361V29.1222C0.6427 31.3489 2.98308 32.7996 4.97731 31.809L30.1549 19.3025C32.3522 18.211 32.3815 15.087 30.2051 13.9544Z" fill="currentColor" />
+        </svg>
+
+        <img
+          src="../assets/harry-potter-harry.png"
+          alt="harry potter"
+          class="btn-mascotte">
+      </button>
+    </form>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d430.74708888269043!2d4.925683351734084!3d52.358206741613074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6097132bffcc7%3A0x290544c1d1a9e37c!2sOBA%20Linnaeus!5e0!3m2!1snl!2snl!4v1748250375369!5m2!1snl!2snl"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<style>
+  /* Signup form */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em;
+    background-color: var(--color-primary-dark);
+    border-radius: 2em;
+    gap: 2em;
+    overflow: hidden;
+
+    max-width: 98%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 2em;
+
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+  
+  .signup-form-title {
+    font-size: var(--font-size-mobile-xl);
+    color: var(--color-secondary);
+
+    @media (min-width: 1024px) {
+      font-size: var(--font-size-desktop-xl);
+      margin-top: 0;
+    }
+  }
+
+  .signup-form-description {
+    max-width: 700px;
+    font-size: var(--font-size-mobile-l);
+    color: var(--color-secondary);
+  }
+
+  /* Form */
+  form {
+    margin-top: 2em;
+  }
+
+  .question {
+    border: none;
+    margin-bottom: 1em;
+  }
+
+  .question-title {
+    font-size: var(--font-size-mobile-l);
+    color: var(--color-secondary);
+    margin-bottom: 0.5em;
+  }
+
+  .radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-family: var(--font-paragraph);
+    color: var(--text-light);
+    gap: 10px;
+  }
+
+  .radio-option label {
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  label {
+    font-size: var(--font-size-mobile-s);
+    color: var(--color-secondary);
+    cursor: pointer;
+  }
+
+  input[type=text],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  /* Button */
+  .btn.btn-orange {
+    position: relative;
+  }
+
+  .btn-mascotte {
+    position: absolute;
+    right: 0;
+    top: -60%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .btn:focus .btn-mascotte {
+    opacity: 1;
+    animation: harryFlyAway 5s infinite;
+  }
+
+  @keyframes harryFlyAway {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50px) translateX(0px);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(-200px) translateX(10000px);
+    }
+    100% {
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  /* Iframe */
+  iframe {
+    margin-top: 2em;
+    width: 100%;
+    height: 250px;
+    border-radius: 1em;
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      height: 100%;
+    }
+  }
+</style>
+
+<script></script>

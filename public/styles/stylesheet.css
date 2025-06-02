@@ -63,7 +63,7 @@ body {
   --font-size-mobile-s: 0.8em;
 
   /* General styling */
-  font-family: var(--poppins);
+  font-family: var(--font-header);
   color: var(--text-dark);
   background-color: var(--text-light);
   line-height: 1.4;
