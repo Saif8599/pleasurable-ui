@@ -1,0 +1,82 @@
+<ul class="workshops">
+    {% for workshop in workshops %}
+    <li>
+        <picture>
+            <img src="https://fdnd-agency.directus.app/assets/{{ workshop.foto }}" alt="">
+        </picture>
+        <div>
+            <h2>{{ workshop.naam }}</h2>
+            <address>{{ workshop.locatie }}</address>
+            <p>{{ workshop.kosten }}</p>
+            <time>{{ workshop.datum | date: "%H:%M" }}</time>
+            <time>{{ workshop.datum | date: "%-d %B %Y" }}</time>
+            <a class="btn btn-brown" href="">Aanmelden 
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.2051 13.9544L5.02757 0.852381C3.03041 -0.186914 0.6427 1.26221 0.6427 3.51361V29.1222C0.6427 31.3489 2.98308 32.7996 4.97731 31.809L30.1549 19.3025C32.3522 18.211 32.3815 15.087 30.2051 13.9544Z" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% comment %} styling {% endcomment %}
+ <style>
+    .workshops {
+        li {
+            border-radius: 1rem;
+            display: flex;
+            background-color: var(--color-secondary);
+            list-style: none;
+            min-height: 15rem;
+            margin: 2rem;
+            padding: 1rem;
+            
+
+            picture {
+                margin-right: 1rem;
+                img {
+                    height: 100%;
+                    width: 20vw;
+                    border-radius: 1rem;
+                    object-fit: cover;
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+
+                
+                h2, address, p, time, a {
+                    font-family: var(--font-paragraph);
+                    word-break: break-all;
+                    font-weight: 600;
+                    color: var(--text-dark);
+                    font-size: var(--font-size-mobile-m);
+                    margin-bottom: .7rem;
+                    
+                    @media (max-width: 400px) {
+                        font-size: var(--font-size-mobile-s);
+                    }
+                }
+                
+                a {
+                    color: var(--color-secondary);
+                    width: fit-content;
+                    padding: 0.1rem 1.5rem;
+                    margin-top: 1rem;
+                }
+            }
+
+        }
+
+        @media (min-width: 1030px) {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+        }
+    }
+ </style>
